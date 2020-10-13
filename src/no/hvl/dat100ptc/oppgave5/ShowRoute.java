@@ -101,7 +101,12 @@ public class ShowRoute extends EasyGraphics {
 		setColor(0,0,0);
 		setFont("Courier",12);
 		
-		//drawString(GPSComputer.displayStatistics(), 10, 10);
+		drawString("Total Time     :" + GPSUtils.formatTime(gpscomputer.totalTime()), 50, 50);
+		drawString("Total distance :" + GPSUtils.formatDouble(gpscomputer.totalDistance()/1000) + " km", 50, 65);
+		drawString("Total elevation:" + GPSUtils.formatDouble(gpscomputer.totalElevation()) + " m", 50, 80);
+		drawString("Max speed      :" + GPSUtils.formatDouble(gpscomputer.maxSpeed()) + " km/t", 50, 95);
+		drawString("Average speed  :" + GPSUtils.formatDouble(gpscomputer.averageSpeed()) + " km/t", 50, 110);
+		drawString("Energy         :" + GPSUtils.formatDouble(gpscomputer.totalKcal(80.0)) + " kcal", 50, 125);
 		
 	}
 
